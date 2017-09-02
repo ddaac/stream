@@ -1,0 +1,10 @@
+{% extends "account/base.html" %}
+
+{% block head_title %}Profile{% endblock %}
+
+{% block content %}
+  {{ user.email }}
+  {% for social in user.socialaccount_set.all %}
+    {{ social.uid }}
+  {% endfor %}
+{% endblock %}

@@ -39,8 +39,11 @@ class User(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
+    nickname = models.CharField(max_length=128)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
+
+    is_connect_with_twitch = models.BooleanField(default=False)
 
     objects = UserManager()
 
@@ -48,11 +51,11 @@ class User(AbstractBaseUser):
 
     def get_full_name(self):
         # The user is identified by their email address
-        return self.email
+        return self.nickname if self.nickname else self.email
 
     def get_short_name(self):
         # The user is identified by their email address
-        return self.email
+        return self.nickname if self.nickname else self.email
 
     def __str__(self):  # __unicode__ on Python 2
         return self.email
