@@ -1,0 +1,119 @@
+/* 폰트 */
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+
+/* 기본 설정 */
+* {
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
+}
+
+h1, h2, h3, h4  {
+    margin-bottom: 25px !important;
+}
+
+a {
+    text-decoration: none;
+    color: #25afec;
+    font-weight: 400;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #25afec;
+    font-weight: 400;
+}
+
+
+/* 네비게이션 */
+body .navbar {
+    background-color: #fff;
+}
+
+
+/* 바디 섹션 */
+
+section h1, h2, h3 {
+    font-weight: 300;
+}
+
+body {
+    background-color: #f6f6f6;
+}
+
+@media (max-height: 540px) {
+
+}
+.section-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -144px 0 0 -180px;
+}
+
+/* 유틸 */
+input, button {
+    border: 1px solid #ececec;
+    outline: 0;
+    color: #333;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 12px 15px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.small-link {
+    font-size: 12px;
+    color: #999 !important;
+    text-align: center;
+    display: block;
+}
+
+/* 로그인 */
+
+.section-login {
+    background-color: #fff;
+    max-width: 360px;
+    padding: 34px 30px;
+}
+
+.section-login p {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.socialaccount_providers li a {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 10px 37px 10px 35px;
+    border-radius: 4px;
+    margin: 25px 0;
+    display: block;
+    opacity: .8;
+}
+
+.socialaccount_providers li a:hover {
+    opacity: 1;
+}
+
+.socialaccount_providers li .twitch {
+    background-color: #6441A4;
+}
+
+.socialaccount_providers li .google {
+    background-color: #999;
+}
+
+.socialaccount_providers li {
+    list-style: none;
+}
+
+.socialaccount_ballot {
+    margin-bottom: 25px;
+}

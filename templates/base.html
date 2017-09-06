@@ -1,40 +1,64 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>{% block head_title %}{% endblock %}</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/stream.css' %}" type="text/css" rel="stylesheet">
     {% block extra_head %}
     {% endblock %}
-  </head>
-  <body>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">Mysite</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">메뉴1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">메뉴2</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="container">
     {% block body %}
 
-    {% if messages %}
-    <div>
-      <strong>Messages:</strong>
-      <ul>
-	{% for message in messages %}
-	<li>{{message}}</li>
-	{% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-
-    <div>
-      <strong>DDA-AC Menu:</strong>
-      <ul>
-	{% if user.is_authenticated %}
-	<li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-	<li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-	{% else %}
-	<li><a href="{% url 'account_login' %}">Sign In</a></li>
-	<li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-	{% endif %}
-      </ul>
-    </div>
-    {% block content %}
+        {% if messages %}
+            <div>
+                <strong>Messages:</strong>
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        {#        <nav>#}
+        {#            <ul>#}
+        {#                {% if user.is_authenticated %}#}
+        {#                    <li><a href="{% url 'account_email' %}">Change E-mail</a></li>#}
+        {#                    <li><a href="{% url 'account_logout' %}">Sign Out</a></li>#}
+        {#                {% else %}#}
+        {#                    <li><a href="{% url 'account_login' %}">Sign In</a></li>#}
+        {#                    <li><a href="{% url 'account_signup' %}">Sign Up</a></li>#}
+        {#                {% endif %}#}
+        {#            </ul>#}
+        {#        </nav>#}
+        {% block content %}
+        {% endblock %}
     {% endblock %}
-    {% endblock %}
-    {% block extra_body %}
-    {% endblock %}
-  </body>
+</section>
+{% block extra_body %}
+{% endblock %}
+</body>
 </html>
