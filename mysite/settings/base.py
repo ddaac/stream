@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.twitch',
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -153,4 +154,13 @@ SOCIALACCOUNT_PROVIDERS = {
             'user_read',
         ]
     },
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
 }
