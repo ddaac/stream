@@ -4,4 +4,5 @@ from django.shortcuts import render
 
 class IndexView(View):
     def get(self, request, *arg, **kwargs):
-        return render(request, 'dashboard/index.html')
+        context = {}
+        return render(request, 'dashboard/index.html', context)
