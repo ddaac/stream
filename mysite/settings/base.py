@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # My Apps
     'accounts.apps.AccountsConfig',
+    'dashboard.apps.DashboardConfig',
 
     # Third-Party Apps
     'allauth',
