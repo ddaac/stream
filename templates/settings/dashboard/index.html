@@ -1,0 +1,174 @@
+{% extends "settings/settings_base.html" %}
+
+{% block head_title %}대시보드{% endblock %}
+
+{% block content_header %}
+<div class="container-fluid dashboard-header-cover" style="background: linear-gradient(rgba(20, 20, 20, .3), rgba(20, 20, 20, .3)),
+        url('http://dda.ac/static/img/mainbackimg.jpg') center 20% no-repeat;">
+    <div class="dashboard-header-bg">
+        <div class="container">
+            <div class="dashboard-header col-lg-12">
+                <img class="dashboard-prigile-img col-xs-12 col-md-2" src="http://dda.ac/static/img/titleicon.png">
+                <p class="nickname">DDA.AC
+                    <label class="switch" style="margin-bottom: -2px; margin-left: 15px;">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </p>
+                <p class="tip">팔로워 수 : 6,204 &nbsp;|&nbsp; 추천 : 315 &nbsp;|&nbsp; 리뷰 : 425</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content_body %}
+    <div class="container">
+        <ul class="dashboard-subnav">
+            <li class="onlink"><a href="/">대시보드</a></li>
+            <li><a href="/">컨텐츠</a></li>
+            <li><a href="/">리뷰</a></li>
+            <li><a href="/">설정</a></li>
+        </ul>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="dashboard-content">
+                    <h4>
+                        방문수 그래프
+{#                        <div class="dropdown">#}
+{#                            <button class="dropbtn">방문수 그래프</button>#}
+{#                            <div class="dropdown-content">#}
+{#                                <a href="#">최근 1일</a>#}
+{#                                <a href="#">최근 1주</a>#}
+{#                                <a href="#">최근 1달</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="dropdown show">#}
+{#                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                                방문수#}
+{#                            </a>#}
+{#                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">#}
+{#                                <a class="dropdown-item" href="#">최근 1일</a>#}
+{#                                <a class="dropdown-item" href="#">최근 1주</a>#}
+{#                                <a class="dropdown-item" href="#">최근 1달</a>#}
+{#                            </div>#}
+{#                        </div>#}
+                    </h4>
+                    <div class="dashboard-stat increase"><small class="stat-title">최근 1일</small><p>14,242</p><small>+ 241</small></div>
+                    <div class="dashboard-stat decrease"><small class="stat-title">최근 7일</small><p>14,242</p><small>+ 241</small></div>
+                    <div class="dashboard-stat increase"><small class="stat-title">최근 30일</small><p>14,242</p><small>+ 241</small></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="dashboard-content increase dashboard-graph">
+                    <h4>
+                        방문수 그래프
+{#                        <div class="dropdown show">#}
+{#                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                                방문수 그래프#}
+{#                            </a>#}
+{#                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">#}
+{#                                <a class="dropdown-item" href="#">최근 1일</a>#}
+{#                                <a class="dropdown-item" href="#">최근 1주</a>#}
+{#                                <a class="dropdown-item" href="#">최근 1달</a>#}
+{#                            </div>#}
+{#                        </div>#}
+                    </h4>
+                    {#                <div class="dashboard-stat"><p>14,242</p><small>+ 241</small></div>#}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dashboard-content dashboard-alarm">
+                    <h4>알림<img src="/static/icon/entypo/bell.svg" alt="Bell pictogram" class="icon"></h4>
+                    <ul class="bell-list">
+                        <li><span class="bell-list-circle"></span><span class="bell-left-txt"><small>1분 전</small>사이트가 생성되었군요! 첫 포스팅을 작성해보세요.</span></li>
+                        <li><span class="bell-list-circle"></span><span class="bell-left-txt"><small>1분 전</small>사이트가 생성되었군요! 첫 포스팅을 작성해보세요.</span></li>
+                        <li><span class="bell-list-circle"></span><span class="bell-left-txt"><small>1분 전</small>사이트가 생성되었군요! 첫 포스팅을 작성해보세요.</span></li>
+                        <li><span class="bell-list-circle"></span><span class="bell-left-txt"><small>1분 전</small>사이트가 생성되었군요! 첫 포스팅을 작성해보세요.</span></li>
+                        <li><span class="bell-list-circle"></span><span class="bell-left-txt"><small>2분 전</small>기존 Youtube, Twitch 계정을 연동해보세요!</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row dashboard-row">
+            <div class="col-md-3"><div class="dashboard-content"><h4>팔로우 중인 스트리머</h4></div></div>
+            {#        <a href="/" class="col-md-3 dashboard-content-btn">최근 리뷰 확인하기</a>#}
+            <div class="col-md-6">
+                <div class="dashboard-content">
+                    <h4 style="float: left;">최근 댓글</h4>
+                    <a class="right-top-tip" href="/">전체 보기</a>
+                    <table>
+                        <thead><th>구분</th><th>작성자</th><th>내용</th><th>시간</th></thead>
+                        <tbody>
+                        <tr>
+                            <th><small class="txt-post">P</small></th>
+                            <th>따무새1호</th>
+                            <th>이덱 실화냐..</th>
+                            <th>1시간 전</th>
+                        </tr>
+                        <tr>
+                            <th><small class="txt-twitch">T</small></th>
+                            <th>따무새1호</th>
+                            <th>이덱 실화냐..</th>
+                            <th>1시간 전</th>
+                        </tr>
+                        <tr>
+                            <th><small class="txt-youtube">Y</small></th>
+                            <th>따무새1호</th>
+                            <th>이덱 실화냐..</th>
+                            <th>1시간 전</th>
+                        </tr>
+                        <tr>
+                            <th><small class="txt-twitch">T</small></th>
+                            <th>따무새1호</th>
+                            <th>이덱 실화냐..</th>
+                            <th>1시간 전</th>
+                        </tr>
+                        <tr>
+                            <th><small class="txt-post">P</small></th>
+                            <th>따무새1호</th>
+                            <th>이덱 실화냐..</th>
+                            <th>1시간 전</th>
+                        </tr>
+                        <tr>
+                            <th><small class="txt-post">P</small></th>
+                            <th>따무새1호</th>
+                            <th>이덱 실화냐..</th>
+                            <th>1시간 전</th>
+                        </tr>
+                        <tr>
+                            <th><small class="txt-twitch">T</small></th>
+                            <th>따무새1호</th>
+                            <th>이덱 실화냐..</th>
+                            <th>1시간 전</th>
+                        </tr>
+                        <tr>
+                            <th><small class="txt-post">P</small></th>
+                            <th>따무새1호</th>
+                            <th>이덱 실화냐..</th>
+                            <th>1시간 전</th>
+                        </tr>
+                        <tr>
+                            <th><small class="txt-twitch">T</small></th>
+                            <th>따무새1호</th>
+                            <th>이덱 실화냐..</th>
+                            <th>1시간 전</th>
+                        </tr>
+                        <tr>
+                            <th><small class="txt-youtube">Y</small></th>
+                            <th>따무새1호</th>
+                            <th>이덱 실화냐..</th>
+                            <th>1시간 전</th>
+                        </tr>
+                        </tbody>
+                        <tfoot><th>구분</th><th>작성자</th><th>내용</th><th>시간</th></tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dashboard-content"><h4>내 팔로워가 본 다른 페이지</h4></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

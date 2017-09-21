@@ -4,15 +4,16 @@
 <html>
 <head>
     <title>{% block head_title %}{% endblock %}</title>
+    <link href="{% static 'css/bootstrap.css' %}" type="text/css" rel="stylesheet">
     <link href="{% static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
     <link href="{% static 'css/stream.css' %}" type="text/css" rel="stylesheet">
     {% block extra_head %}
     {% endblock %}
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="/">Mysite</a>
+        <a class="navbar-brand" href="/">DDA.AC</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,16 +22,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">메뉴1</a>
+                    <a class="nav-link" href="#">스트리머</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">메뉴2</a>
+                    <a class="nav-link" href="#">컨텐츠</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        게시판
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">게시판1</a>
+                        <a class="dropdown-item" href="#">게시판2</a>
+                        <a class="dropdown-item" href="#">게시판3</a>
+                    </div>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<section class="container">
+<section style="margin-top: 0px">
     {% block body %}
 
         {% if messages %}
@@ -54,11 +65,21 @@
         {#                {% endif %}#}
         {#            </ul>#}
         {#        </nav>#}
-        {% block content %}
+        {% block content_header %}
         {% endblock %}
     {% endblock %}
 </section>
-{% block extra_body %}
+{% block content_body %}
 {% endblock %}
+
 </body>
+<footer class="container">
+    Copyright ⓒ 2017 DDA.AC. All Rights Reserved.
+</footer>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="{% static 'js/bootstrap.js'%}" ></script>
+<script src="{% static 'js/bootstrap.min.js'%}" ></script>
+<script src="{% static 'js/stream.js'%}" ></script>
+
 </html>
