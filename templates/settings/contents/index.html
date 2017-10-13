@@ -1,0 +1,202 @@
+{% extends "settings/settings_base.html" %}
+
+{% block head_title %}컨텐츠 관리{% endblock %}
+
+{% block content_header %}
+    <div class="container-fluid dashboard-header-cover" style="background: linear-gradient(rgba(20, 20, 20, .3), rgba(20, 20, 20, .3)),
+        url('http://dda.ac/static/img/mainbackimg.jpg') center 20% no-repeat;">
+        <div class="dashboard-header-bg">
+            <div class="container">
+                <div class="dashboard-header col-lg-12">
+                    <img class="dashboard-prigile-img col-xs-12 col-md-2" src="http://dda.ac/static/img/titleicon.png">
+                    <p class="nickname">DDA.AC
+                        <label class="switch" style="margin-bottom: -2px; margin-left: 15px;">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </p>
+                    <p class="tip">팔로워 수 : 6,204 &nbsp;|&nbsp; 추천 : 315 &nbsp;|&nbsp; 리뷰 : 425</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content_body %}
+    <div class="container">
+        <ul class="dashboard-subnav">
+            <li><a href="/settings/dashboard">대시보드</a></li>
+            <li class="onlink"><a href="/">컨텐츠</a></li>
+            <li><a href="/settings/reviews">리뷰</a></li>
+            <li><a href="/settings/profile">설정</a></li>
+        </ul>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="dashboard-content dashboard-list">
+                    <div class="contents-list">
+                        <small class="txt-youtube-color">Youtube<span class="right-tip"><img style="padding-right: 3px;" src="/static/icon/entypo/chat.svg" alt="Bell pictogram" class="icon">19</span><span class="right-tip">2시간 전</span></small>
+                        <p>Lue - 탈진 전사 공략</p>
+                    </div>
+                    <div class="contents-list">
+                        <small class="txt-twitch-color">Twitch<span class="right-tip"><img style="padding-right: 3px;" src="/static/icon/entypo/chat.svg" alt="Bell pictogram" class="icon">19</span><span class="right-tip">2시간 전</span></small>
+                        <p>DDA.AC 트위치 스트리밍</p>
+                    </div>
+                    <div class="contents-list">
+                        <small class="txt-post-color">Post<span class="right-tip"><img style="padding-right: 3px;" src="/static/icon/entypo/chat.svg" alt="Bell pictogram" class="icon">19</span><span class="right-tip">2시간 전</span></small>
+                        <p>vS 데이터 리포트 #62</p>
+                    </div>
+                    <div class="contents-list selected">
+                        <small class="txt-post-color">Post<span class="right-tip"><img style="padding-right: 3px;" src="/static/icon/entypo/chat.svg" alt="Bell pictogram" class="icon">19</span><span class="right-tip">2시간 전</span></small>
+                        <p>vS 데이터 리포트 #61</p>
+                    </div>
+                    <div class="contents-list">
+                        <small class="txt-youtube-color">Youtube<span class="right-tip"><img style="padding-right: 3px;" src="/static/icon/entypo/chat.svg" alt="Bell pictogram" class="icon">19</span><span class="right-tip">2시간 전</span></small>
+                        <p>Lue - 탈진 전사 공략</p>
+                    </div>
+                    <div class="contents-list">
+                        <small class="txt-twitch-color">Twitch<span class="right-tip"><img style="padding-right: 3px;" src="/static/icon/entypo/chat.svg" alt="Bell pictogram" class="icon">19</span><span class="right-tip">2시간 전</span></small>
+                        <p>DDA.AC 트위치 스트리밍</p>
+                    </div>
+                    <div class="contents-list">
+                        <small class="txt-post-color">Post<span class="right-tip"><img style="padding-right: 3px;" src="/static/icon/entypo/chat.svg" alt="Bell pictogram" class="icon">19</span><span class="right-tip">2시간 전</span></small>
+                        <p>vS 데이터 리포트 #62</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="contents-box">
+                    <div class="contents">
+                        <small class="txt-post-color">Post</small>
+                        <h4>
+                            <span class="right-tip">
+                                <img style="padding-right: 3px;" src="/static/icon/entypo/edit.svg" alt="Bell pictogram" class="icon">
+                            </span>
+                            vS 데이터 리포트 #61
+                        </h4>
+                        <small class="txt-post-color">2017. 8. 8 수요일 오후 2시</small>
+                    </div>
+                    <div class="contents">
+                        <p class="description">반갑습니다! 하스스톤 역사상 가장 의미심장한 밸런스 패치가 진행된 지 일주일이 조금 안 되는 시간이 흘렀습니다. 정신 자극과 이글거리는 전쟁 도끼는 모든 덱에 항상 들어가는 가장 강력한 카드였...
+                            <br><a href="" target="_blank" class="txt-more">더보기</a>
+                        </p>
+                    </div>
+                    <div class="contents comments-list">
+                        <small>댓글 목록</small>
+                        <div class="contents-comment">
+                            <img src="http://dda.ac/static/img/pfimg_default.jpg" alt="dafault" class="default-pf-img">
+                            <small>여관주인<span class="right-tip">2시간 전</span></small>
+                            <p>아이쿠 이런!</p>
+                        </div>
+                        <div class="contents-comment">
+                            <img src="http://dda.ac/static/img/pfimg_default.jpg" alt="dafault" class="default-pf-img">
+                            <small>여관주인2<span class="right-tip">2시간 전</span></small>
+                            <p>오랜만이군요!</p>
+                        </div>
+                        <div class="contents-comment">
+                            <img src="http://dda.ac/static/img/pfimg_default.jpg" alt="dafault" class="default-pf-img">
+                            <small>여관주인3<span class="right-tip">2시간 전</span></small>
+                            <p>안색이 창백하시군요.. 어서와서 불가에 와서 몸좀 녹이세요!</p>
+                        </div>
+                        <div class="contents-comment">
+                            <img src="http://dda.ac/static/img/pfimg_default.jpg" alt="dafault" class="default-pf-img">
+                            <small>대마법사 메디브<span class="right-tip">2시간 전</span></small>
+                            <p>어서와~ 모두 널 기다려 만찬을즐기며 다함께 몸을 흔들어봐 커다란 체스 여기가 바로 파라다이스</p>
+                        </div>
+                        <div class="contents-comment">
+                            <img src="http://dda.ac/static/img/pfimg_default.jpg" alt="dafault" class="default-pf-img">
+                            <small>여관주인3<span class="right-tip">2시간 전</span></small>
+                            <p>안색이 창백하시군요.. 어서와서 불가에 와서 몸좀 녹이세요!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="dashboard-content dashboard-calendar">
+                    내 방송 일정
+                    <p class="calendar-month"><a href="" class="float-left"><</a>0월<a href="" class="float-right">></a></p>
+                    <table style="margin-top: 15px">
+                        <thead>
+                        <th class="txt-youtube-color">일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th class="txt-youtube-color">토</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>1<span class="calendar-none"></span></th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5<span class="calendar-exist"></span></th>
+                            <th>6</th>
+                            <th>7</th>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                        </tr>
+                        <tr>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18<span class="calendar-exist"></span></th>
+                            <th>19</th>
+                            <th>20</th>
+                            <th>21</th>
+                        </tr>
+                        <tr>
+                            <th>22</th>
+                            <th>23<span class="calendar-exist"></span></th>
+                            <th class="calendar-selected">24<span class="calendar-exist"></span></th>
+                            <th>25</th>
+                            <th>26</th>
+                            <th>27</th>
+                            <th>28</th>
+                        </tr>
+                        <tr>
+                            <th>29</th>
+                            <th>30</th>
+                            <th>31</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a class="dashboard-content-btn" style="margin: 20px auto" href="">
+                    일정 등록 +
+                </a>
+                <ul class="bell-list calendar-today-list">
+                    <li>
+                        <span class="bell-list-circle"></span>
+                        <span class="bell-left-txt">
+                            <span class="right-tip">
+                                <img style="padding-right: 3px;" src="/static/icon/entypo/edit.svg" alt="Bell pictogram" class="icon">
+                            </span>
+                            <small>3:00PM</small>인벤 하스돌
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bell-list-circle"></span>
+                        <span class="bell-left-txt">
+                            <span class="right-tip">
+                                <img style="padding-right: 3px;" src="/static/icon/entypo/edit.svg" alt="Bell pictogram" class="icon">
+                            </span>
+                            <small>8:00PM</small>개인 방송 - 이 덱 1티어다, 배틀 그라운드
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

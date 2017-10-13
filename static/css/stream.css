@@ -104,12 +104,12 @@ body {
 }
 
 /*@media (max-width: 768px) {*/
-    /*.first-content {*/
-        /*margin-left: 0;*/
-    /*}*/
-    /*.last-content {*/
-        /*margin-right: 0;*/
-    /*}*/
+/*.first-content {*/
+/*margin-left: 0;*/
+/*}*/
+/*.last-content {*/
+/*margin-right: 0;*/
+/*}*/
 /*}*/
 
 footer {
@@ -133,6 +133,73 @@ section .container-fluid .container {
 }
 
 /* 유틸 */
+.right-text {
+    float: right;
+}
+
+.calendar-month {
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+}
+
+.calendar-selected {
+    background-color: #25afec;
+}
+
+.calendar-selected {
+    color: #fff;
+}
+
+.calendar-selected .calendar-exist {
+    background-color: #fff !important;
+}
+
+.calendar-exist {
+    background-color: #25afec;
+    width: 3px;
+    height: 3px;
+    margin-left: 46.5%;
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-top: -3px;
+}
+
+.default-pf-img {
+    border: 1px solid #ececec;
+    width: 40px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.right-tip {
+    float: right;
+    color: #666;
+    font-weight: 200;
+    margin-left: 15px;
+}
+
+.right-tip .icon {
+    cursor: pointer;
+}
+
+.txt-more {
+    padding-top: 12px;
+    display: inline-block;
+}
+
+.selected {
+    background-color: #e9f7fd;
+    border-left: 5px solid #25afec;
+    padding-left: 20px !important;
+}
+
 .dropbtn {
     color: #333;
     font-size: 16px;
@@ -248,7 +315,11 @@ input:checked + .slider:before {
     margin: 0 auto;
     border-radius: 4px;
     opacity: .8;
-    background-color: #28c76f;
+    background-color: #28c76f !important;
+}
+
+.txt-post-color {
+    color: #28c76f !important;
 }
 
 .txt-youtube {
@@ -262,6 +333,10 @@ input:checked + .slider:before {
     background-color: #e30920 !important;
 }
 
+.txt-youtube-color {
+    color: #e30920 !important;
+}
+
 .txt-twitch {
     font-weight: 400;
     color: #fff;
@@ -271,6 +346,10 @@ input:checked + .slider:before {
     border-radius: 4px;
     opacity: .8;
     background-color: #6441a4 !important;
+}
+
+.txt-twitch-color {
+    color: #6441a4 !important;
 }
 
 input, button {
@@ -439,7 +518,7 @@ table tbody tr:last-child {
 
 .dashboard-header-cover {
     /*background: linear-gradient(rgba(20, 20, 20, .3), rgba(20, 20, 20, .3)),*/
-        /*url("http://dda.ac/static/img/mainbackimg.jpg") center 20% no-repeat;*/
+    /*url("http://dda.ac/static/img/mainbackimg.jpg") center 20% no-repeat;*/
     -webkit-background-size: 100% !important;
     -moz-background-size: 100% !important;
     -o-background-size: 100% !important;
@@ -447,8 +526,8 @@ table tbody tr:last-child {
 }
 
 /*.dashboard-header-bg {*/
-    /*background: url("http://dda.ac/static/img/mainbackimg.jpg");*/
-    /*background-size: cover;*/
+/*background: url("http://dda.ac/static/img/mainbackimg.jpg");*/
+/*background-size: cover;*/
 /*}*/
 
 .dashboard-prigile-img {
@@ -465,7 +544,7 @@ table tbody tr:last-child {
     .dashboard-header .tip {
         font-size: 11px;
     }
-    .dashboard-content {
+    .dashboard-content, .contents-box {
         margin-bottom: 15px;
     }
 }
@@ -618,6 +697,16 @@ table tbody tr:last-child {
     -moz-border-radius: 4px;
     border-radius: 4px;
     margin-bottom: 15px;
+    display: block;
+    color: #fff;
+}
+
+.dashboard-content-btn:hover {
+    color: #fff;
+}
+
+.dashboard-content-btn:visited {
+    color: #fff;
 }
 
 .dashboard-content-btn a {
@@ -628,7 +717,7 @@ table tbody tr:last-child {
 }
 
 .dashboard-content .bell-list {
-    background: url('http://dda.ac/static/img/bell-list-bg.jpg') repeat-y 8px;
+    background: url('http://dda.ac/static/img/bell-list-bg.png') repeat-y 8px;
     background-repeat: no-repeat;
     background-position: left top;
     max-height: 330px;
@@ -648,6 +737,7 @@ table tbody tr:last-child {
 }
 
 .bell-left-txt {
+    display: block;
     padding-left: 20px;
     font-size: 14px;
     font-weight: 400;
@@ -684,4 +774,119 @@ table tbody tr:last-child {
 
 .dashboard-alarm {
     padding-right: 0px !important;
+}
+
+.dashboard-list {
+    padding: 0px !important;
+}
+
+@media (max-width: 767px) {
+    .dashboard-list, .comments-list {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+}
+
+.contents-list {
+    cursor: pointer;
+}
+
+.contents-list:hover {
+    background-color: #e9f7fd;
+}
+
+.dashboard-list .contents-list {
+    padding: 15px 25px;
+    border-bottom: 1px solid #ececec;
+}
+
+.dashboard-list .contents-list:last-child {
+    border-bottom: 0px;
+}
+
+.dashboard-list .contents-list small {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.dashboard-list .contents-list p {
+    color: #333;
+    font-weight: 400;
+}
+
+.contents-box {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ececec;
+    background-color: #fff;
+}
+
+.contents {
+    border-bottom: 1px solid #ececec;
+    padding: 25px;
+}
+
+.contents small {
+    text-align: left;
+    font-weight: 400;
+}
+
+.contents h4 {
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.contents .description {
+    color: #666;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.contents .contents-comment {
+    margin-top: 25px;
+}
+
+.contents .contents-comment p {
+    font-size: 14px;
+    padding-top: 8px;
+}
+
+.contents .contents-comment:last-child {
+    margin-bottom: 25px;
+}
+
+.contents .contents-comment small {
+    font-weight: 200;
+}
+
+.dashboard-content table {
+    margin-top: 25px;
+}
+
+.dashboard-content tbody tr th {
+    cursor: pointer;
+}
+
+.calendar-today-list {
+    background: url('http://dda.ac/static/img/bell-list-bg.png') repeat-y 8px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    overflow-y: hidden;
+}
+
+.calendar-today-list li:last-child {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+    .dashboard-calendar {
+        margin-top: 0px;
+    }
+}
+
+.dashboard-calendar table tbody tr th:hover {
+    background-color: #e9f7fd;
 }

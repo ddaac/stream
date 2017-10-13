@@ -28,7 +28,7 @@
                     <a class="nav-link" href="#">컨텐츠</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         게시판
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -54,17 +54,6 @@
                 </ul>
             </div>
         {% endif %}
-        {#        <nav>#}
-        {#            <ul>#}
-        {#                {% if user.is_authenticated %}#}
-        {#                    <li><a href="{% url 'account_email' %}">Change E-mail</a></li>#}
-        {#                    <li><a href="{% url 'account_logout' %}">Sign Out</a></li>#}
-        {#                {% else %}#}
-        {#                    <li><a href="{% url 'account_login' %}">Sign In</a></li>#}
-        {#                    <li><a href="{% url 'account_signup' %}">Sign Up</a></li>#}
-        {#                {% endif %}#}
-        {#            </ul>#}
-        {#        </nav>#}
         {% block content_header %}
         {% endblock %}
     {% endblock %}
