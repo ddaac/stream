@@ -3,56 +3,38 @@
 {% block head_title %}대시보드{% endblock %}
 
 {% block content_header %}
-<div class="container-fluid dashboard-header-cover" style="background: linear-gradient(rgba(20, 20, 20, .3), rgba(20, 20, 20, .3)),
+    <div class="container-fluid dashboard-header-cover" style="background: linear-gradient(rgba(20, 20, 20, .3), rgba(20, 20, 20, .3)),
         url('http://dda.ac/static/img/mainbackimg.jpg') center 20% no-repeat;">
-    <div class="dashboard-header-bg">
-        <div class="container">
-            <div class="dashboard-header col-lg-12">
-                <img class="dashboard-prigile-img col-xs-12 col-md-2" src="http://dda.ac/static/img/titleicon.png">
-                <p class="nickname">DDA.AC
-                    <label class="switch" style="margin-bottom: -2px; margin-left: 15px;">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                    </label>
-                </p>
-                <p class="tip">팔로워 수 : 6,204 &nbsp;|&nbsp; 추천 : 315 &nbsp;|&nbsp; 리뷰 : 425</p>
+        <div class="dashboard-header-bg">
+            <div class="container">
+                <div class="dashboard-header col-lg-12">
+                    <img class="dashboard-prigile-img col-xs-12 col-md-2" src="http://dda.ac/static/img/titleicon.png">
+                    <p class="nickname">DDA.AC
+                        <label class="switch" style="margin-bottom: -2px; margin-left: 15px;">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </p>
+                    <p class="tip">팔로워 수 : 6,204 &nbsp;|&nbsp; 추천 : 315 &nbsp;|&nbsp; 리뷰 : 425</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block content_body %}
     <div class="container">
         <ul class="dashboard-subnav">
             <li class="onlink"><a href="/">대시보드</a></li>
-            <li><a href="/">컨텐츠</a></li>
-            <li><a href="/">리뷰</a></li>
-            <li><a href="/">설정</a></li>
+            <li><a href="/settings/contents">컨텐츠</a></li>
+            <li><a href="/settings/reviews">리뷰</a></li>
+            <li><a href="/settings/profile">설정</a></li>
         </ul>
         <div class="row">
             <div class="col-md-3">
                 <div class="dashboard-content">
                     <h4>
                         방문수 그래프
-{#                        <div class="dropdown">#}
-{#                            <button class="dropbtn">방문수 그래프</button>#}
-{#                            <div class="dropdown-content">#}
-{#                                <a href="#">최근 1일</a>#}
-{#                                <a href="#">최근 1주</a>#}
-{#                                <a href="#">최근 1달</a>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                        <div class="dropdown show">#}
-{#                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
-{#                                방문수#}
-{#                            </a>#}
-{#                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">#}
-{#                                <a class="dropdown-item" href="#">최근 1일</a>#}
-{#                                <a class="dropdown-item" href="#">최근 1주</a>#}
-{#                                <a class="dropdown-item" href="#">최근 1달</a>#}
-{#                            </div>#}
-{#                        </div>#}
                     </h4>
                     <div class="dashboard-stat increase"><small class="stat-title">최근 1일</small><p>14,242</p><small>+ 241</small></div>
                     <div class="dashboard-stat decrease"><small class="stat-title">최근 7일</small><p>14,242</p><small>+ 241</small></div>
@@ -63,18 +45,7 @@
                 <div class="dashboard-content increase dashboard-graph">
                     <h4>
                         방문수 그래프
-{#                        <div class="dropdown show">#}
-{#                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
-{#                                방문수 그래프#}
-{#                            </a>#}
-{#                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">#}
-{#                                <a class="dropdown-item" href="#">최근 1일</a>#}
-{#                                <a class="dropdown-item" href="#">최근 1주</a>#}
-{#                                <a class="dropdown-item" href="#">최근 1달</a>#}
-{#                            </div>#}
-{#                        </div>#}
                     </h4>
-                    {#                <div class="dashboard-stat"><p>14,242</p><small>+ 241</small></div>#}
                 </div>
             </div>
             <div class="col-md-3">
