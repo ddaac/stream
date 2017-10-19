@@ -257,6 +257,8 @@ button.dropbtn:after {
     display: inline-block;
     width: 40px;
     height: 18px;
+    margin-bottom: -2px;
+    margin-left: 15px;
 }
 
 .switch input {display:none;}
@@ -350,6 +352,21 @@ input:checked + .slider:before {
 
 .txt-twitch-color {
     color: #6441a4 !important;
+}
+
+.txt-twitter {
+    font-weight: 400;
+    color: #fff;
+    padding: 2px 3px !important;
+    width: 20px;
+    margin: 0 auto;
+    border-radius: 4px;
+    opacity: .8;
+    background-color: #00aced !important;
+}
+
+.txt-twitter-color {
+    color: #00aced !important;
 }
 
 input, button {
@@ -530,7 +547,7 @@ table tbody tr:last-child {
 /*background-size: cover;*/
 /*}*/
 
-.dashboard-prigile-img {
+.dashboard-profile-img {
     max-width: 110px;
     border-radius: 50%;
     display: block;
@@ -659,7 +676,7 @@ table tbody tr:last-child {
 }
 
 .dashboard-content .dashboard-stat p {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 0;
 }
 
@@ -768,8 +785,8 @@ table tbody tr:last-child {
 
 .dashboard-graph, .dashboard-alarm {
     overflow: hidden;
-    max-height: 436px;
-    height: 436px;
+    max-height: 418px;
+    height: 418px;
 }
 
 .dashboard-alarm {
@@ -889,4 +906,22 @@ table tbody tr:last-child {
 
 .dashboard-calendar table tbody tr th:hover {
     background-color: #e9f7fd;
+}
+
+.settings-profile-img {
+    width: 80px;
+    height: auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #ececec;
+}
+
+.settings-background-img {
+    height: auto;
+    width: 100%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 15px;
 }
